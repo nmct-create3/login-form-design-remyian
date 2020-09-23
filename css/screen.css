@@ -1,6 +1,29 @@
 /*------------------------------------*\
-#FONTS
+  #FONTS
 \*------------------------------------*/
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 200;
+    src: url("..\fonts\Inter-Regular.woff2") format("woff2"),
+         url("..\fonts\Inter-Regular.woff2") format("woff");
+         
+}
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 400;
+    src: url("..\fonts\Inter-Regular.woff2") format("woff2"),
+         url("..\fonts\Inter-Regular.woff2") format("woff");
+}
+
+@font-face {
+    font-family: "Inter Web";
+    font-weight: 600;
+    src: url("..\fonts\Inter-SemiBold.woff2") format("woff2"),
+         url("..\fonts\Inter-SemiBold.woff2") format("woff");
+}
+
 
 /*------------------------------------*\
 #Variables
@@ -26,11 +49,11 @@ html {
     font-size: 16px;
     line-height: 1.5;
     font-family: Helvetica, arial, sans-serif;
-    color: grey;
+    color: #20223a;
     box-sizing: border-box;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: white;
+    background-color:  #F5F6FA;
 }
 
 *,
@@ -47,13 +70,13 @@ html {
 */
 
 ::-moz-selection {
-    background: HotPink;
+    background:  #3385FF;
     color: white;
     text-shadow: none;
 }
 
 ::selection {
-    background: HotPink;
+    background:  #3385FF;
     color: white;
     text-shadow: none;
 }
@@ -158,20 +181,27 @@ hr {
 }
 
 a {
-    color: HotPink;
+    color:  #3385FF;
     transition: all .1s ease-in-out;
 }
 
 a:visited,
 a:active {
-    color: HotPink;
+    color:  #e20606;
 }
 
 a:hover,
 a:focus {
-    color: DeepPink;
+    color:  #021f57;
 }
 
+label,
+input {
+    display: block;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
 /*------------------------------------*\
 #OBJECTS
 \*------------------------------------*/
@@ -450,11 +480,55 @@ a:focus {
     Class to put on all input="text" like form inputs
 */
 
-.c-input {
-
+.form-field--option{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
+.c-logo {
+    height: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+.c-logo__symbol {
+    height: 100%;
+    display: block;
+    
+}
+
+.c-logo__path1{
+    fill:#20223A
+}
+.c-logo__path2{
+    fill:#3385FF
+}
+.c-logo__path3{
+    fill:#1B4186
+}
+
+.c-input {
+    font: inherit;
+    color: #B5B6C0;
+    width: 100%;
+    border: 1px;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: dimgray;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    padding: 5px;
+
+    outline: none;
+}
+
+
 .c-input:focus {
+    border-color: #3385ff;
+    box-shadow: 0 0 0 3px #3385ff57;
 }
 
 /*
@@ -464,7 +538,7 @@ a:focus {
 */
 
 .c-label {
-
+    padding-bottom: 0;
 }
 
 /* If a input is focused within the form-field class change te color of the label */
@@ -480,19 +554,28 @@ a:focus {
 */
 
 .c-button {
-
+    font-size: 16px;
+    text-decoration: none;
+    color: white;
+    background-color: #2E77E6;
+    box-shadow: 0 0 2px white;
+    padding: 12px;
+    Display: inline-block;
+    Line-height: 24px;
+    border-radius: 3px;
+    width: 100%;
 }
 
 .c-button:hover {
-
+    background-color: #1353b4;
 }
 
 .c-button:focus {
-
+    background-color: #1353b4;
 }
 
 .c-button:active {
-
+    background-color: #003077;
 }
 
 .c-button--block {
